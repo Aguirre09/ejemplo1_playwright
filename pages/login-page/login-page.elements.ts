@@ -1,5 +1,7 @@
 import { Page } from "@playwright/test";
 
+
+// mapeo de elementos para LOgin page
 export class LoginPageElements{
     private page:Page
     constructor(page:Page){
