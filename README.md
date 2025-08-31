@@ -1,1 +1,1 @@
-# ejemplo1_playwright
+# ejemplo1_playwright-ts 
