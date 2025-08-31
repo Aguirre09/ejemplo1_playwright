@@ -14,8 +14,29 @@ export class CommonPageMethods{
         await this.page.goto("https://www.saucedemo.com/v1/index.html")
     }
 
-
+    // clic para abrir el menu que está al lado izquierdo
     async openMenu(){
         await this.commonPageElements.buttons.openMenu.click()
     }
+
+    // para menu izquierdo, al dar clic, se abrirá todas las opciones
+    async clickOnAllItemsOption(){
+        await this.commonPageElements.leftMenu.allItems.click()
+    }
+
+    // clic en "acerca" opción
+    async clickOnAboutOption(){
+        await this.commonPageElements.leftMenu.about.click()
+    }
+
+    async clickOnLogOutOption(){
+        await this.commonPageElements.leftMenu.logout.click()
+    }
+
+    async clickOnResetAppStateOption(){
+        await this.commonPageElements.leftMenu.resetAppState.click()
+    }
+
+
+
 }
