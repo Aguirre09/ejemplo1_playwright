@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+import { Page, expect } from "@playwright/test";
 import { ProductsPageElements } from "./products-page.elements";
 
 export class ProductsPageMethods{
@@ -18,5 +18,12 @@ export class ProductsPageMethods{
 
     async clickOnCartIcon(){
         await this.productsPageElements.icons.cart.click()
+    }
+
+    async verifyProductsPageIsDisplayed(){
+        const elementsCount = await this.productsPageElements.otherElements.pageTitle.count()
+
+        // si encuentra uno solo 
+        expect (elementsCount).toEqual(1)
     }
 }
